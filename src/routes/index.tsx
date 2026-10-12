@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
+import { pageHead } from '../lib/seo'
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute('/')({
+  head: () => pageHead('id'),
+  component: Home,
+})
 
 function Home() {
   return (

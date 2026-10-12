@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
+import { pageHead } from '../lib/seo'
 
-export const Route = createFileRoute('/en')({ component: English })
+export const Route = createFileRoute('/en')({
+  head: () => pageHead('en'),
+  component: English,
+})
 
 function English() {
   return (
