@@ -1,0 +1,13 @@
+@theme static {
+  --color-cream: #fffdf2;
+  --color-ink: #181600;
+  --color-sun: #e2b900;
+  --color-sun-bright: #ffe45c;
+  --color-pale: #fff3ad;
+  --color-pale-soft: #fff8d5;
+  --color-rule: #e7d98b;
+  --color-muted: #69613a;
+
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4 Variable', Georgia, serif;
+}

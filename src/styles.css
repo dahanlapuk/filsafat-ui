@@ -1,5 +1,7 @@
-
-@import "tailwindcss";
+@import '@fontsource-variable/source-serif-4';
+@import '@fontsource-variable/inter';
+@import 'tailwindcss';
+@import './tokens.css';
 
 * {
   box-sizing: border-box;
@@ -13,5 +15,7 @@ body,
 
 body {
   margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }
-
