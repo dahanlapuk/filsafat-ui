@@ -1,5 +1,7 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
+import { contentId } from '../content/id'
 import { pageHead } from '../lib/seo'
+import { Landing } from '../pages/Landing'
 
 export const Route = createFileRoute('/')({
   head: () => pageHead('id'),
@@ -7,11 +9,5 @@ export const Route = createFileRoute('/')({
 })
 
 function Home() {
-  return (
-    <main>
-      <h1>UJI PRERENDER INDONESIA</h1>
-      <p>Departemen Filsafat Universitas Indonesia</p>
-      <Link to="/en">EN</Link>
-    </main>
-  )
+  return <Landing content={contentId} />
 }

@@ -1,5 +1,7 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
+import { contentEn } from '../content/en'
 import { pageHead } from '../lib/seo'
+import { Landing } from '../pages/Landing'
 
 export const Route = createFileRoute('/en')({
   head: () => pageHead('en'),
@@ -7,11 +9,5 @@ export const Route = createFileRoute('/en')({
 })
 
 function English() {
-  return (
-    <main>
-      <h1>PRERENDER TEST ENGLISH</h1>
-      <p>Department of Philosophy, Universitas Indonesia</p>
-      <Link to="/">ID</Link>
-    </main>
-  )
+  return <Landing content={contentEn} />
 }
