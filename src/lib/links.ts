@@ -1,0 +1,10 @@
+export const WHATSAPP_GROUP_URL: string = 'https://chat.whatsapp.com/BeVIa8J76GM4zfFXRqYq5w'
+export const LIBRARY_INFO_URL = 'https://biblioteka.filsafatui.app/informasi'
+export const MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=JRPG%2BHXF%20Pondok%20Cina%20Beji%20Depok'
+export const KOMAFIL_IG_URL = 'https://www.instagram.com/komafil.ui/'
+export const ALUMNI_URL = 'https://alumnifilsafatui.com/'
+export const ALUMNI_IG_URL = 'https://www.instagram.com/alumnifilsafatui/'
+export const HUMAS_IG_URL = 'https://www.instagram.com/humasfibui/'
+export const HUMAS_PHONE_HREF = 'tel:+62217863528'
+export const HUMAS_EMAIL_HREF = 'mailto:humas1@ui.ac.id'

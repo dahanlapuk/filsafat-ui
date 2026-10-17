@@ -88,6 +88,9 @@ export function pageHead(lang: Lang) {
       { rel: 'alternate', hrefLang: 'id', href: url(copy.id.path) },
       { rel: 'alternate', hrefLang: 'en', href: url(copy.en.path) },
       { rel: 'alternate', hrefLang: 'x-default', href: url(copy.id.path) },
+      { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
+      { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
     ],
     scripts: [
       { type: 'application/ld+json', children: JSON.stringify(jsonLd(lang)) },

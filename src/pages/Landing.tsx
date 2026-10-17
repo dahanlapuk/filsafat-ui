@@ -1,8 +1,10 @@
 import { Link } from '@tanstack/react-router'
 import type { Content } from '../content/types'
 import { programsEn, programsId } from '../content/programs'
-import { BIBLIOTEKA_URL } from '../lib/site'
+import { sectionsEn, sectionsId } from '../content/sections'
+import { BIBLIOTEKA_URL, FIB_URL } from '../lib/site'
 import { Programs } from './Programs'
+import { Sections } from './Sections'
 
 const wrap = 'mx-auto w-full max-w-6xl px-5 md:px-8'
 const focus =
@@ -96,11 +98,28 @@ export function Landing({ content: c }: { content: Content }) {
         </section>
 
         <Programs copy={c.lang === 'id' ? programsId : programsEn} />
+        <Sections copy={c.lang === 'id' ? sectionsId : sectionsEn} />
       </main>
 
       <footer className="bg-ink text-cream">
         <div className={`${wrap} grid gap-10 py-14 md:grid-cols-3`}>
           <div>
+            <a
+              href={FIB_URL}
+              className={`mb-5 inline-block bg-cream p-2 ${focus}`}
+            >
+              <img
+                src="/fib-ui-logo.svg"
+                alt={
+                  c.lang === 'id'
+                    ? 'Logo Fakultas Ilmu Pengetahuan Budaya Universitas Indonesia'
+                    : 'Logo of the Faculty of Humanities, Universitas Indonesia'
+                }
+                width="50"
+                height="56"
+                className="block h-14 w-[50px]"
+              />
+            </a>
             <p className="font-serif text-xl font-semibold">{c.footer.name}</p>
             <p className="mt-2 text-sm text-cream/80">{c.footer.place}</p>
           </div>
