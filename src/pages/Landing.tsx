@@ -106,7 +106,7 @@ export function Landing({ content: c }: { content: Content }) {
           <div>
             <a
               href={FIB_URL}
-              className={`mb-5 inline-block bg-cream p-2 ${focus}`}
+              className={`mb-5 inline-block ${focus}`}
             >
               <img
                 src="/fib-ui-logo.svg"
@@ -135,14 +135,29 @@ export function Landing({ content: c }: { content: Content }) {
               ))}
             </ul>
           </nav>
-          <div className="text-sm">
-            <a
-              href={BIBLIOTEKA_URL}
-              className={`font-semibold underline underline-offset-4 ${focus}`}
-            >
-              {c.footer.libraryLabel}
-            </a>
-          </div>
+          <nav aria-label={c.footer.linksLabel}>
+            <p className={`${label} text-cream/80`}>{c.footer.linksLabel}</p>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li>
+                <a href={BIBLIOTEKA_URL} className={`underline underline-offset-4 ${focus}`}>
+                  {c.footer.libraryLabel}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`${BIBLIOTEKA_URL.replace(/\/$/, '')}/informasi`}
+                  className={`underline underline-offset-4 ${focus}`}
+                >
+                  {c.footer.infoLabel}
+                </a>
+              </li>
+              <li>
+                <a href={FIB_URL} className={`underline underline-offset-4 ${focus}`}>
+                  {c.footer.facultyLabel}
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div className="border-t border-cream/20">
           <div

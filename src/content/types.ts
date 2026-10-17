@@ -13,7 +13,10 @@ export type Content = {
     name: string
     place: string
     menuLabel: string
+    linksLabel: string
     libraryLabel: string
+    infoLabel: string
+    facultyLabel: string
     copyright: string
     builtBy: string
   }
