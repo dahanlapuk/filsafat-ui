@@ -23,7 +23,8 @@ export type SectionsContent = {
       full?: string
       paragraphs: string[]
       note?: string
-      links: { label: string; href: string }[]
+      logo?: { src: string; alt: string }
+      links: { label: string; href: string; kind: 'instagram' | 'site' }[]
     }[]
     join: { title: string; text: string; label: string }
   }
@@ -68,22 +69,24 @@ export const sectionsId: SectionsContent = {
       {
         name: 'KOMAFIL',
         full: 'Komunitas Mahasiswa Filsafat',
+        logo: { src: '/komafil-logo.png', alt: 'Logo KOMAFIL' },
         paragraphs: [
           'Himpunan yang menaungi mahasiswa tingkat sarjana di Program Studi Ilmu Filsafat FIB UI, berdiri sejak 15 November 2002.',
           'Wadah bagi mahasiswa untuk mengembangkan minat, bakat, dan kemampuan di bidang akademik, organisasi, advokasi, serta pengabdian masyarakat.',
         ],
         note: 'Ketua 2026: Mukhyar Ziyadaturrizqi',
-        links: [{ label: 'Instagram @komafil.ui', href: KOMAFIL_IG_URL }],
+        links: [{ label: '@komafil.ui', href: KOMAFIL_IG_URL, kind: 'instagram' }],
       },
       {
-        name: 'Alumni Filsafat UI',
+        name: 'Ikatan Alumni Filsafat UI',
+        logo: { src: '/logo-alumni.png', alt: 'Logo Ikatan Alumni Filsafat UI' },
         paragraphs: [
           'Jaringan alumni Filsafat UI lintas angkatan.',
           'Menyelenggarakan acara seperti Marginalia, Philosopher at Work, dan PhilosoGigs, serta menerbitkan Buletin Agora dan Kertas Kerja.',
         ],
         links: [
-          { label: 'alumnifilsafatui.com', href: ALUMNI_URL },
-          { label: 'Instagram @alumnifilsafatui', href: ALUMNI_IG_URL },
+          { label: '@alumnifilsafatui', href: ALUMNI_IG_URL, kind: 'instagram' },
+          { label: 'alumnifilsafatui.com', href: ALUMNI_URL, kind: 'site' },
         ],
       },
     ],
@@ -150,20 +153,22 @@ export const sectionsEn: SectionsContent = {
       {
         name: 'KOMAFIL',
         full: 'Komunitas Mahasiswa Filsafat',
+        logo: { src: '/komafil-logo.png', alt: 'Logo KOMAFIL' },
         paragraphs: [
           'The student association for undergraduate students of the Philosophy Studies Program at FIB UI, founded on 15 November 2002. A place for students to develop their interests, talents, and skills in academics, organization, advocacy, and community service.',
         ],
         note: 'Chair 2026: Mukhyar Ziyadaturrizqi',
-        links: [{ label: 'Instagram @komafil.ui', href: KOMAFIL_IG_URL }],
+        links: [{ label: '@komafil.ui', href: KOMAFIL_IG_URL, kind: 'instagram' }],
       },
       {
-        name: 'Alumni Filsafat UI',
+        name: 'Ikatan Alumni Filsafat UI',
+        logo: { src: '/logo-alumni.png', alt: 'Logo Ikatan Alumni Filsafat UI' },
         paragraphs: [
           'The alumni network of Filsafat UI across cohorts. Its site has an alumni directory, essays and publications (Buletin Agora, Kertas Kerja), and events such as Marginalia, Philosopher at Work and PhilosoGigs. Run separately from the department.',
         ],
         links: [
-          { label: 'alumnifilsafatui.com', href: ALUMNI_URL },
-          { label: 'Instagram @alumnifilsafatui', href: ALUMNI_IG_URL },
+          { label: '@alumnifilsafatui', href: ALUMNI_IG_URL, kind: 'instagram' },
+          { label: 'alumnifilsafatui.com', href: ALUMNI_URL, kind: 'site' },
         ],
       },
     ],

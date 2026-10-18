@@ -1,14 +1,14 @@
 import type { SectionsContent } from '../content/sections'
 import { LIBRARY_INFO_URL, MAPS_URL, WHATSAPP_GROUP_URL } from '../lib/links'
 import { BIBLIOTEKA_URL } from '../lib/site'
-import { ExternalIcon } from './icons'
+import { ExternalIcon, GlobeIcon, InstagramIcon, WhatsappIcon } from './icons'
 
 const wrap = 'mx-auto w-full max-w-6xl px-5 md:px-8'
 const focus =
   'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current'
 const label = 'text-xs font-semibold uppercase tracking-[0.14em]'
 const textLink = `font-semibold underline underline-offset-4 ${focus}`
-const row = 'grid gap-4 border-b border-rule py-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2.4fr)] md:gap-16'
+const row = 'grid gap-4 border-b border-rule pb-2 pt-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2.4fr)] md:gap-16'
 
 export function Sections({ copy }: { copy: SectionsContent }) {
   const { library, community, contact } = copy
@@ -63,6 +63,33 @@ export function Sections({ copy }: { copy: SectionsContent }) {
                 <div>
                   <h3 className="font-serif text-2xl font-semibold">{item.name}</h3>
                   {item.full && <p className="mt-1 text-sm text-muted">{item.full}</p>}
+                  {item.logo && (
+                    <img src={item.logo.src} alt={item.logo.alt} className="mt-4 h-24 w-auto max-w-full object-contain object-left" />
+                  )}
+                  <ul className="mb-0 mt-12 flex flex-col items-start">
+                    {item.links.map((l) => (
+                      <li key={l.href}>
+                        {l.kind === 'instagram' ? (
+                          <a
+                            href={l.href}
+                            aria-label={`Instagram ${l.label}`}
+                            className={`flex items-center gap-2 py-1 text-sm font-medium text-muted hover:text-ink focus-visible:text-ink ${focus}`}
+                          >
+                            <InstagramIcon size={20} />
+                            {l.label}
+                          </a>
+                        ) : (
+                          <a
+                            href={l.href}
+                            className={`flex items-center gap-2 py-1 text-sm font-medium text-muted hover:text-ink focus-visible:text-ink ${focus}`}
+                          >
+                            <GlobeIcon size={20} />
+                            {l.label}
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <div>
                   <div className="max-w-2xl space-y-3 text-lg leading-relaxed">
@@ -71,30 +98,22 @@ export function Sections({ copy }: { copy: SectionsContent }) {
                     ))}
                   </div>
                   {item.note && <p className="mt-3 font-medium">{item.note}</p>}
-                  <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-                    {item.links.map((l) => (
-                      <li key={l.href}>
-                        <a href={l.href} className={textLink}>
-                          {l.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             ))}
             {WHATSAPP_GROUP_URL ? (
               <div className={row}>
-                <h3 className="font-serif text-2xl font-semibold">{community.join.title}</h3>
                 <div>
-                  <p className="max-w-2xl text-lg leading-relaxed">{community.join.text}</p>
+                  <h3 className="font-serif text-2xl font-semibold">{community.join.title}</h3>
                   <a
                     href={WHATSAPP_GROUP_URL}
-                    className={`mt-5 inline-block bg-sun px-5 py-3 text-sm font-semibold text-ink ${focus}`}
+                    className={`mt-4 inline-flex items-center gap-2 py-0.5 text-sm font-medium text-muted hover:text-ink focus-visible:text-ink ${focus}`}
                   >
+                    <WhatsappIcon size={20} />
                     {community.join.label}
                   </a>
                 </div>
+                <p className="max-w-2xl text-lg leading-relaxed">{community.join.text}</p>
               </div>
             ) : null}
           </div>
