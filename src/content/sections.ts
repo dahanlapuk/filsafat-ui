@@ -21,7 +21,7 @@ export type SectionsContent = {
     items: {
       name: string
       full?: string
-      text: string
+      paragraphs: string[]
       note?: string
       links: { label: string; href: string }[]
     }[]
@@ -45,7 +45,7 @@ export const sectionsId: SectionsContent = {
   library: {
     label: 'Biblioteka',
     title: 'Biblioteka Departemen Filsafat UI',
-    text: 'Biblioteka Departemen Filsafat UI menyimpan koleksi buku, jurnal, dan tugas akhir milik departemen. Semuanya bisa dicari di katalog daring. Untuk meminjam, isi formulir di halaman buku (tanpa akun), tunggu persetujuan admin, lalu datang dan baca di tempat.',
+    text: 'Temukan dan pinjam koleksi buku, jurnal, dan tugas akhir milik departemen.',
     facts: [
       {
         term: 'Lokasi',
@@ -58,7 +58,6 @@ export const sectionsId: SectionsContent = {
         term: 'Jam',
         lines: ['Senin sampai Rabu dan Jumat: 08.00-16.00 WIB', 'Kamis: 08.00-14.00 WIB'],
       },
-      { term: 'Peminjam', lines: ['Mahasiswa dan dosen Departemen Filsafat UI (S1, S2, S3)'] },
     ],
     catalogLabel: 'Buka katalog',
     infoLabel: 'Informasi lengkap',
@@ -69,13 +68,19 @@ export const sectionsId: SectionsContent = {
       {
         name: 'KOMAFIL',
         full: 'Komunitas Mahasiswa Filsafat',
-        text: 'Himpunan yang menaungi mahasiswa tingkat sarjana di Program Studi Ilmu Filsafat FIB UI, berdiri sejak 15 November 2002. Wadah bagi mahasiswa untuk mengembangkan minat, bakat, dan kemampuan di bidang akademik, organisasi, advokasi, serta pengabdian masyarakat.',
+        paragraphs: [
+          'Himpunan yang menaungi mahasiswa tingkat sarjana di Program Studi Ilmu Filsafat FIB UI, berdiri sejak 15 November 2002.',
+          'Wadah bagi mahasiswa untuk mengembangkan minat, bakat, dan kemampuan di bidang akademik, organisasi, advokasi, serta pengabdian masyarakat.',
+        ],
         note: 'Ketua 2026: Mukhyar Ziyadaturrizqi',
         links: [{ label: 'Instagram @komafil.ui', href: KOMAFIL_IG_URL }],
       },
       {
         name: 'Alumni Filsafat UI',
-        text: 'Jaringan alumni Filsafat UI lintas angkatan. Situsnya memuat direktori alumni, tulisan dan terbitan (Buletin Agora, Kertas Kerja), serta acara seperti Marginalia, Philosopher at Work, dan PhilosoGigs. Dikelola terpisah dari departemen.',
+        paragraphs: [
+          'Jaringan alumni Filsafat UI lintas angkatan.',
+          'Menyelenggarakan acara seperti Marginalia, Philosopher at Work, dan PhilosoGigs, serta menerbitkan Buletin Agora dan Kertas Kerja.',
+        ],
         links: [
           { label: 'alumnifilsafatui.com', href: ALUMNI_URL },
           { label: 'Instagram @alumnifilsafatui', href: ALUMNI_IG_URL },
@@ -84,7 +89,7 @@ export const sectionsId: SectionsContent = {
     ],
     join: {
       title: 'Grup pengumuman',
-      text: 'Pengumuman program studi untuk mahasiswa. Hanya admin yang dapat mengirim pesan.',
+      text: 'Pengumuman prodi untuk mahasiswa. Hanya admin yang bisa mengirim pesan.',
       label: 'Gabung grup',
     },
   },
@@ -97,11 +102,11 @@ export const sectionsId: SectionsContent = {
         'Gedung VII Anton M. Moeliono, Fakultas Ilmu Pengetahuan Budaya, Universitas Indonesia',
         'Ruang Departemen Filsafat, Lantai 2. Area membaca berada di Lantai 1.',
       ],
-      mapLabel: 'Buka di Google Maps',
+      mapLabel: 'Lihat di Google Maps',
     },
     faculty: {
       title: 'Hubungi fakultas',
-      note: 'Kontak tingkat fakultas.',
+      note: 'Departemen belum punya kontak sendiri, jadi ini kontak fakultas.',
       office: 'Kantor Humas & Protokol FIB UI',
       address: ['Jalan Prof. Dr. Nugroho Notosusanto', 'Kampus UI, Depok 16424'],
       items: [
@@ -109,7 +114,7 @@ export const sectionsId: SectionsContent = {
         { term: 'Surel', value: 'humas1@ui.ac.id', href: HUMAS_EMAIL_HREF },
         { term: 'Instagram', value: '@humasfibui', href: HUMAS_IG_URL },
       ],
-      checked: 'Kontak diambil dari situs FIB, terakhir diperiksa Oktober 2026.',
+      checked: 'Sumber: situs FIB, Oktober 2026.',
     },
   },
 }
@@ -145,13 +150,17 @@ export const sectionsEn: SectionsContent = {
       {
         name: 'KOMAFIL',
         full: 'Komunitas Mahasiswa Filsafat',
-        text: 'The student association for undergraduate students of the Philosophy Studies Program at FIB UI, founded on 15 November 2002. A place for students to develop their interests, talents, and skills in academics, organization, advocacy, and community service.',
+        paragraphs: [
+          'The student association for undergraduate students of the Philosophy Studies Program at FIB UI, founded on 15 November 2002. A place for students to develop their interests, talents, and skills in academics, organization, advocacy, and community service.',
+        ],
         note: 'Chair 2026: Mukhyar Ziyadaturrizqi',
         links: [{ label: 'Instagram @komafil.ui', href: KOMAFIL_IG_URL }],
       },
       {
         name: 'Alumni Filsafat UI',
-        text: 'The alumni network of Filsafat UI across cohorts. Its site has an alumni directory, essays and publications (Buletin Agora, Kertas Kerja), and events such as Marginalia, Philosopher at Work and PhilosoGigs. Run separately from the department.',
+        paragraphs: [
+          'The alumni network of Filsafat UI across cohorts. Its site has an alumni directory, essays and publications (Buletin Agora, Kertas Kerja), and events such as Marginalia, Philosopher at Work and PhilosoGigs. Run separately from the department.',
+        ],
         links: [
           { label: 'alumnifilsafatui.com', href: ALUMNI_URL },
           { label: 'Instagram @alumnifilsafatui', href: ALUMNI_IG_URL },

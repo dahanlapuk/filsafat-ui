@@ -1,6 +1,7 @@
 import type { SectionsContent } from '../content/sections'
 import { LIBRARY_INFO_URL, MAPS_URL, WHATSAPP_GROUP_URL } from '../lib/links'
 import { BIBLIOTEKA_URL } from '../lib/site'
+import { ExternalIcon } from './icons'
 
 const wrap = 'mx-auto w-full max-w-6xl px-5 md:px-8'
 const focus =
@@ -28,9 +29,10 @@ export function Sections({ copy }: { copy: SectionsContent }) {
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
               <a
                 href={BIBLIOTEKA_URL}
-                className={`bg-ink px-5 py-3 text-sm font-semibold text-cream ${focus}`}
+                className={`inline-flex items-center gap-2 bg-ink px-5 py-3 text-sm font-semibold text-cream ${focus}`}
               >
                 {library.catalogLabel}
+                <ExternalIcon />
               </a>
               <a href={LIBRARY_INFO_URL} className={textLink}>
                 {library.infoLabel}
@@ -63,7 +65,11 @@ export function Sections({ copy }: { copy: SectionsContent }) {
                   {item.full && <p className="mt-1 text-sm text-muted">{item.full}</p>}
                 </div>
                 <div>
-                  <p className="max-w-2xl text-lg leading-relaxed">{item.text}</p>
+                  <div className="max-w-2xl space-y-3 text-lg leading-relaxed">
+                    {item.paragraphs.map((t) => (
+                      <p key={t}>{t}</p>
+                    ))}
+                  </div>
                   {item.note && <p className="mt-3 font-medium">{item.note}</p>}
                   <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                     {item.links.map((l) => (
@@ -109,8 +115,9 @@ export function Sections({ copy }: { copy: SectionsContent }) {
                   </span>
                 ))}
               </address>
-              <a href={MAPS_URL} className={`mt-5 inline-block text-sm ${textLink}`}>
+              <a href={MAPS_URL} className={`mt-5 inline-flex items-center gap-1.5 text-sm ${textLink}`}>
                 {contact.visit.mapLabel}
+                <ExternalIcon />
               </a>
             </div>
             <div>
