@@ -107,13 +107,13 @@ export function Sections({ copy }: { copy: SectionsContent }) {
                   <h3 className="font-serif text-2xl font-semibold">{community.join.title}</h3>
                   <a
                     href={WHATSAPP_GROUP_URL}
-                    className={`mt-4 inline-flex items-center gap-2 py-0.5 text-sm font-medium text-muted hover:text-ink focus-visible:text-ink ${focus}`}
+                    className={`mt-6 inline-flex items-center gap-2 py-0.5 text-sm font-medium text-muted hover:text-ink focus-visible:text-ink ${focus}`}
                   >
                     <WhatsappIcon size={20} />
                     {community.join.label}
                   </a>
                 </div>
-                <p className="max-w-2xl text-lg leading-relaxed">{community.join.text}</p>
+                <p className="max-w-xl text-balance text-lg leading-relaxed">{community.join.text}</p>
               </div>
             ) : null}
           </div>
