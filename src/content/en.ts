@@ -26,6 +26,7 @@ export const contentEn: Content = {
     { id: 'tentang', label: 'About' },
     { id: 'pendidikan', label: 'Programs' },
     { id: 'dosen', label: 'Faculty' },
+    { id: 'kurikulum', label: 'Curriculum' },
     { id: 'biblioteka', label: 'Library' },
     { id: 'komunitas', label: 'Community and alumni' },
     { id: 'kontak', label: 'Contact' },

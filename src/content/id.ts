@@ -26,6 +26,7 @@ export const contentId: Content = {
     { id: 'tentang', label: 'Tentang' },
     { id: 'pendidikan', label: 'Pendidikan' },
     { id: 'dosen', label: 'Dosen' },
+    { id: 'kurikulum', label: 'Kurikulum' },
     { id: 'biblioteka', label: 'Biblioteka' },
     { id: 'komunitas', label: 'Komunitas dan alumni' },
     { id: 'kontak', label: 'Kontak' },

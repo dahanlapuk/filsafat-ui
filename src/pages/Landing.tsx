@@ -1,8 +1,10 @@
 import { Link } from '@tanstack/react-router'
 import type { Content } from '../content/types'
+import { kurikulumEn, kurikulumId } from '../content/kurikulum'
 import { programsEn, programsId } from '../content/programs'
 import { sectionsEn, sectionsId } from '../content/sections'
 import { BIBLIOTEKA_URL, FIB_URL } from '../lib/site'
+import { Curriculum } from './Curriculum'
 import { Programs } from './Programs'
 import { Sections } from './Sections'
 
@@ -98,6 +100,7 @@ export function Landing({ content: c }: { content: Content }) {
         </section>
 
         <Programs copy={c.lang === 'id' ? programsId : programsEn} />
+        <Curriculum copy={c.lang === 'id' ? kurikulumId : kurikulumEn} />
         <Sections copy={c.lang === 'id' ? sectionsId : sectionsEn} />
       </main>
 
