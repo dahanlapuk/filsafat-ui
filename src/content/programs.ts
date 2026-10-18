@@ -119,18 +119,14 @@ export const programsId: ProgramsContent = {
 export const programsEn: ProgramsContent = {
   programs: {
     label: 'Programs',
-    hint: 'Select a program to see its faculty below.',
-    linkLabel: 'Program page at FIB UI',
+    hint: 'Select a level, then see its teaching staff below.',
+    linkLabel: 'View on the faculty site',
     items: [
       {
         key: 's1',
         level: 'S1',
         name: 'Philosophy Studies Program',
-        facts: [
-          '144 credits (114 compulsory, 30 elective)',
-          'Eight semesters',
-          'Off-campus learning (MBKM) in semester 7, thesis in semester 8',
-        ],
+        facts: ['144 credits', 'Regular and Non-Regular'],
         href: 'https://fib.ui.ac.id/en/subject-prerequisites/',
       },
       {
@@ -144,22 +140,18 @@ export const programsEn: ProgramsContent = {
         key: 's3',
         level: 'S3',
         name: 'Ph.D. in Philosophy',
-        facts: [
-          '88 credits',
-          'Coursework track or research track',
-          'Six semesters, ending in a doctoral defense',
-        ],
+        facts: ['88 credits', 'Coursework track or research track'],
         href: 'https://fib.ui.ac.id/en/doctor-of-philosophy-programs/',
       },
     ],
   },
   faculty: {
-    label: 'Faculty',
+    label: 'Teaching Staff',
     selectLabel: 'Select a level',
-    listTitle: 'Faculty',
-    regularTitle: 'Permanent faculty',
-    adjunctTitle: 'Adjunct faculty',
-    sourceNote: 'The faculty list was confirmed by the department, October 2026.',
+    listTitle: 'Teaching Staff',
+    regularTitle: 'Permanent lecturers',
+    adjunctTitle: 'Adjunct lecturers',
+    sourceNote: 'Source: confirmed by the department, October 2026.',
     roles: {
       ketuaDepartemen: 'Head of Department',
       ketuaProdi: 'Head of the Undergraduate Program',

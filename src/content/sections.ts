@@ -81,7 +81,7 @@ export const sectionsId: SectionsContent = {
         logo: { src: '/logo-alumni.png', alt: 'Logo Ikatan Alumni Filsafat UI' },
         paragraphs: [
           'Jaringan alumni Filsafat UI lintas angkatan.',
-          'Menyelenggarakan acara seperti Marginalia, Philosopher at Work, dan PhilosoGigs, serta menerbitkan Buletin Agora dan Kertas Kerja.',
+          'Menyelenggarakan acara seperti Marginalia, Philosopher at Work, dan PhilosoGigs.',
         ],
         links: [
           { label: '@alumnifilsafatui', href: ALUMNI_IG_URL, kind: 'instagram' },
@@ -124,7 +124,7 @@ export const sectionsEn: SectionsContent = {
   library: {
     label: 'Library',
     title: 'Biblioteka Departemen Filsafat UI',
-    text: 'The library of the Department of Philosophy. It holds the department’s books, journals, and theses, all searchable in the online catalog. To borrow, fill in the form on a book’s page (no account needed), wait for an admin’s approval, then come to the library and read on site.',
+    text: 'Find and borrow the department’s collection of books, journals, and theses.',
     facts: [
       {
         term: 'Location',
@@ -136,10 +136,6 @@ export const sectionsEn: SectionsContent = {
       {
         term: 'Hours',
         lines: ['Monday to Wednesday and Friday: 08:00–16:00 WIB', 'Thursday: 08:00–14:00 WIB'],
-      },
-      {
-        term: 'Borrowers',
-        lines: ['Students and lecturers of the Department of Philosophy (S1, S2, S3)'],
       },
     ],
     catalogLabel: 'Open the catalog (Indonesian)',
@@ -153,7 +149,8 @@ export const sectionsEn: SectionsContent = {
         full: 'Komunitas Mahasiswa Filsafat',
         logo: { src: '/komafil-logo.png', alt: 'Logo KOMAFIL' },
         paragraphs: [
-          'The student association for undergraduate students of the Philosophy Studies Program at FIB UI, founded on 15 November 2002. A place for students to develop their interests, talents, and skills in academics, organization, advocacy, and community service.',
+          'The student association for undergraduates of the Philosophy Studies Program at FIB UI, founded on 15 November 2002.',
+          'A place for students to develop their interests, talents, and skills in academics, organization, advocacy, and community service.',
         ],
         note: 'Chair 2026: Mukhyar Ziyadaturrizqi',
         links: [{ label: '@komafil.ui', href: KOMAFIL_IG_URL, kind: 'instagram' }],
@@ -162,7 +159,8 @@ export const sectionsEn: SectionsContent = {
         name: 'Ikatan Alumni Filsafat UI',
         logo: { src: '/logo-alumni.png', alt: 'Logo Ikatan Alumni Filsafat UI' },
         paragraphs: [
-          'The alumni network of Filsafat UI across cohorts. Its site has an alumni directory, essays and publications (Buletin Agora, Kertas Kerja), and events such as Marginalia, Philosopher at Work and PhilosoGigs. Run separately from the department.',
+          'The alumni network of Filsafat UI across cohorts.',
+          'Organizes events such as Marginalia, Philosopher at Work, and PhilosoGigs.',
         ],
         links: [
           { label: '@alumnifilsafatui', href: ALUMNI_IG_URL, kind: 'instagram' },
@@ -172,7 +170,7 @@ export const sectionsEn: SectionsContent = {
     ],
     join: {
       title: 'Announcement group',
-      text: 'Announcements for students of the Philosophy Studies Program. Only admins can post.',
+      text: 'Program announcements for students. Only admins can post.',
       label: 'Join the group',
     },
   },
@@ -185,7 +183,7 @@ export const sectionsEn: SectionsContent = {
         'Gedung VII Anton M. Moeliono, Faculty of Humanities, Universitas Indonesia',
         'Department of Philosophy room, 2nd floor. Reading area on the 1st floor.',
       ],
-      mapLabel: 'Open in Google Maps',
+      mapLabel: 'View on Google Maps',
     },
     faculty: {
       title: 'Contact the faculty*',

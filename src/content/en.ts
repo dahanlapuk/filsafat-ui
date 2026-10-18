@@ -6,7 +6,7 @@ export const contentEn: Content = {
   header: { wordmark: 'Filsafat UI', switchLabel: 'Language' },
   hero: {
     title: 'Department of Philosophy, Universitas Indonesia',
-    lead: 'Undergraduate, master’s, and doctoral study in philosophy at the Faculty of Humanities, UI Depok campus.',
+    lead: 'A place to study and develop philosophical thought, from the undergraduate to the doctoral level, at the Faculty of Humanities, Universitas Indonesia.',
     programsLabel: 'Programs',
     libraryLabel: 'Biblioteka Filsafat UI',
   },
@@ -15,17 +15,16 @@ export const contentEn: Content = {
     facts: [
       { term: 'Levels', value: 'S1, S2, S3' },
       { term: 'Faculty', value: 'Humanities (FIB UI)' },
-      { term: 'Campus', value: 'UI Depok' },
+      { term: 'Campus', value: 'Universitas Indonesia, Depok Campus' },
     ],
     paragraphs: [
-      'The Department of Philosophy is part of the Faculty of Humanities (Fakultas Ilmu Pengetahuan Budaya) at Universitas Indonesia, in Depok. It runs three programs: the Philosophy Studies Program (S1, undergraduate), the Master of Philosophy (S2), and the Ph.D. in Philosophy (S3).',
-      'Details for each program are below.',
+      'An academic environment with a strong philosophical character, strengthened by teaching staff whose expertise spans the fields of philosophy.',
     ],
   },
   nav: [
     { id: 'tentang', label: 'About' },
     { id: 'pendidikan', label: 'Programs' },
-    { id: 'dosen', label: 'Faculty' },
+    { id: 'dosen', label: 'Teaching Staff' },
     { id: 'kurikulum', label: 'Curriculum' },
     { id: 'biblioteka', label: 'Library' },
     { id: 'komunitas', label: 'Community and alumni' },
@@ -33,7 +32,7 @@ export const contentEn: Content = {
   ],
   footer: {
     name: 'Department of Philosophy, Universitas Indonesia',
-    place: 'Faculty of Humanities, UI Depok campus',
+    place: 'Faculty of Humanities, Depok Campus',
     menuLabel: 'On this page',
     linksLabel: 'Links',
     libraryLabel: 'Biblioteka Departemen Filsafat UI',

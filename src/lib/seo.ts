@@ -14,7 +14,7 @@ const copy = {
     path: '/en',
     title: 'Department of Philosophy, Universitas Indonesia',
     description:
-      'Department of Philosophy, Faculty of Humanities, Universitas Indonesia (Depok): undergraduate, master’s and Ph.D. programs, faculty, library, and contact.',
+      'S1, S2, and S3 philosophy programs at the Faculty of Humanities, Universitas Indonesia, Depok Campus. Curriculum, teaching staff, and Biblioteka.',
     locale: 'en_US',
   },
 } as const
