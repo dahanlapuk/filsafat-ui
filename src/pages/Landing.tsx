@@ -59,20 +59,6 @@ export function Landing({ content: c }: { content: Content }) {
               {c.hero.title}
             </h1>
             <p className="mt-6 max-w-2xl text-lg md:text-xl">{c.hero.lead}</p>
-            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <a
-                href="#pendidikan"
-                className={`text-base font-semibold underline underline-offset-4 ${focus}`}
-              >
-                {c.hero.programsLabel}
-              </a>
-              <a
-                href={BIBLIOTEKA_URL}
-                className={`bg-ink px-5 py-3 text-sm font-semibold text-cream ${focus}`}
-              >
-                {c.hero.libraryLabel}
-              </a>
-            </div>
           </div>
         </section>
 

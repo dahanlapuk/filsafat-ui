@@ -37,7 +37,6 @@ export type SectionsContent = {
       office: string
       address: string[]
       items: { term: string; value: string; href: string }[]
-      checked: string
     }
   }
 }
@@ -108,8 +107,8 @@ export const sectionsId: SectionsContent = {
       mapLabel: 'Lihat di Google Maps',
     },
     faculty: {
-      title: 'Hubungi fakultas',
-      note: 'Departemen belum punya kontak sendiri, jadi ini kontak fakultas.',
+      title: 'Hubungi fakultas*',
+      note: 'Departemen belum memiliki kontak tersendiri, sehingga kontak yang tercantum adalah kontak fakultas.',
       office: 'Kantor Humas & Protokol FIB UI',
       address: ['Jalan Prof. Dr. Nugroho Notosusanto', 'Kampus UI, Depok 16424'],
       items: [
@@ -117,7 +116,6 @@ export const sectionsId: SectionsContent = {
         { term: 'Surel', value: 'humas1@ui.ac.id', href: HUMAS_EMAIL_HREF },
         { term: 'Instagram', value: '@humasfibui', href: HUMAS_IG_URL },
       ],
-      checked: 'Sumber: situs FIB, Oktober 2026.',
     },
   },
 }
@@ -190,8 +188,8 @@ export const sectionsEn: SectionsContent = {
       mapLabel: 'Open in Google Maps',
     },
     faculty: {
-      title: 'Contact the faculty',
-      note: 'Faculty-level contact.',
+      title: 'Contact the faculty*',
+      note: 'The department has no contact details of its own, so those listed are the faculty’s.',
       office: 'Public Relations Office, Faculty of Humanities',
       address: ['Jalan Prof. Dr. Nugroho Notosusanto', 'Kampus UI, Depok 16424'],
       items: [
@@ -199,7 +197,6 @@ export const sectionsEn: SectionsContent = {
         { term: 'Email', value: 'humas1@ui.ac.id', href: HUMAS_EMAIL_HREF },
         { term: 'Instagram', value: '@humasfibui', href: HUMAS_IG_URL },
       ],
-      checked: 'Contact details are taken from the FIB website, last checked October 2026.',
     },
   },
 }

@@ -77,3 +77,19 @@ export function GlobeIcon({ size = 20 }: { size?: number }) {
     </svg>
   )
 }
+
+export function Marked({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(/(\*+)/).map((part, i) =>
+        part.startsWith('*') ? (
+          <sup key={i} className="ml-px text-[0.6em] font-bold text-ink">
+            {part}
+          </sup>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  )
+}

@@ -140,9 +140,9 @@ export function Curriculum({ copy }: { copy: KurikulumContent }) {
               <Marked text={f.mark} /> {f.text}
             </p>
           ))}
-          <p className="pt-3">{copy.sourceNote}</p>
-          {copy.courseNote && <p>{copy.courseNote}</p>}
+          {copy.courseNote && <p className="pt-3">{copy.courseNote}</p>}
         </div>
+        <p className="mt-10 text-right text-xs text-muted/85">{copy.sourceNote}</p>
       </div>
     </section>
   )

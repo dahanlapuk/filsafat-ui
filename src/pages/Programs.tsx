@@ -115,7 +115,7 @@ export function Programs({ copy }: { copy: ProgramsContent }) {
             )
           })}
 
-          <p className="mt-8 text-sm text-muted">{faculty.sourceNote}</p>
+          <p className="mt-10 text-right text-xs text-muted/85">{faculty.sourceNote}</p>
         </div>
       </section>
     </>

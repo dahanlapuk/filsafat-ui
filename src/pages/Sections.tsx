@@ -1,7 +1,7 @@
 import type { SectionsContent } from '../content/sections'
 import { LIBRARY_INFO_URL, MAPS_URL, WHATSAPP_GROUP_URL } from '../lib/links'
 import { BIBLIOTEKA_URL } from '../lib/site'
-import { ExternalIcon, GlobeIcon, InstagramIcon, WhatsappIcon } from './icons'
+import { ExternalIcon, GlobeIcon, InstagramIcon, Marked, WhatsappIcon } from './icons'
 
 const wrap = 'mx-auto w-full max-w-6xl px-5 md:px-8'
 const focus =
@@ -140,8 +140,9 @@ export function Sections({ copy }: { copy: SectionsContent }) {
               </a>
             </div>
             <div>
-              <h3 className="font-serif text-2xl font-semibold">{contact.faculty.title}</h3>
-              <p className="mt-1 text-sm text-muted">{contact.faculty.note}</p>
+              <h3 className="font-serif text-2xl font-semibold">
+                <Marked text={contact.faculty.title} />
+              </h3>
               <p className="mt-4 font-medium">{contact.faculty.office}</p>
               <address className="mt-2 not-italic leading-relaxed">
                 {contact.faculty.address.map((l) => (
@@ -165,9 +166,11 @@ export function Sections({ copy }: { copy: SectionsContent }) {
                   </div>
                 ))}
               </dl>
-              <p className="mt-4 text-sm text-muted">{contact.faculty.checked}</p>
             </div>
           </div>
+          <p className="mt-10 text-right text-xs text-muted/85">
+            <Marked text="*" /> {contact.faculty.note}
+          </p>
         </div>
       </section>
     </>
