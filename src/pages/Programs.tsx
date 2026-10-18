@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { dosen, type Level } from '../content/dosen'
+import { dosen, type Dosen, type Level } from '../content/dosen'
 import type { ProgramsContent } from '../content/programs'
 
 const wrap = 'mx-auto w-full max-w-6xl px-5 md:px-8'
@@ -11,7 +11,6 @@ const levels: Level[] = ['s1', 's2', 's3']
 export function Programs({ copy }: { copy: ProgramsContent }) {
   const { programs, faculty } = copy
   const [active, setActive] = useState<Level>('s1')
-  const activeProgram = programs.items.find((p) => p.key === active)
 
   return (
     <>
@@ -88,46 +87,68 @@ export function Programs({ copy }: { copy: ProgramsContent }) {
 
           {levels.map((k) => {
             const list = dosen.filter((d) => d.levels.includes(k))
+            const regular = list.filter((d) => !d.adjunct)
+            const adjunct = list.filter((d) => d.adjunct)
             return (
               <div key={k} id={`dosen-${k}`} hidden={k !== active} className="mt-8">
                 <h3 className="font-serif text-2xl font-semibold">
                   {faculty.listTitle} · {k.toUpperCase()}{' '}
                   <span className="font-normal text-muted">({list.length})</span>
                 </h3>
-                <ul className="mt-6 grid gap-x-12 border-t border-rule md:grid-cols-2">
-                  {list.map((d) => {
-                    const role = d.roles?.[k]
-                    const field = k !== 's1' && d.field ? faculty.fields[d.field] : null
-                    return (
-                      <li key={d.name} className="border-b border-rule py-4">
-                        <p className="font-serif text-xl">{d.name}</p>
-                        {role && (
-                          <p className="mt-2 inline-block bg-sun px-2 py-0.5 text-xs font-semibold">
-                            {faculty.roles[role]}
-                          </p>
-                        )}
-                        {field && <p className="mt-1 text-sm text-muted">{field}</p>}
-                      </li>
-                    )
-                  })}
-                </ul>
+                {adjunct.length > 0 ? (
+                  <>
+                    <h4 className="mt-8 font-serif text-xl font-semibold">
+                      {faculty.regularTitle}{' '}
+                      <span className="font-normal text-muted">({regular.length})</span>
+                    </h4>
+                    <DosenList items={regular} level={k} faculty={faculty} />
+                    <h4 className="mt-12 font-serif text-xl font-semibold">
+                      {faculty.adjunctTitle}{' '}
+                      <span className="font-normal text-muted">({adjunct.length})</span>
+                    </h4>
+                    <DosenList items={adjunct} level={k} faculty={faculty} />
+                  </>
+                ) : (
+                  <DosenList items={regular} level={k} faculty={faculty} />
+                )}
               </div>
             )
           })}
 
-          <p className="mt-8 text-sm text-muted">
-            {faculty.sourceNote}{' '}
-            {activeProgram && (
-              <a
-                href={activeProgram.href}
-                className={`font-semibold text-ink underline underline-offset-4 ${focus}`}
-              >
-                {faculty.sourceLabel}
-              </a>
-            )}
-          </p>
+          <p className="mt-8 text-sm text-muted">{faculty.sourceNote}</p>
         </div>
       </section>
     </>
+  )
+}
+
+function DosenList({
+  items,
+  level,
+  faculty,
+}: {
+  items: Dosen[]
+  level: Level
+  faculty: ProgramsContent['faculty']
+}) {
+  return (
+    <ul className="mt-5 grid gap-x-12 border-t border-rule md:grid-cols-2">
+      {items.map((d) => {
+        const role = d.roles?.[level]
+        return (
+          <li key={d.name} className="border-b border-rule py-4">
+            <p className="font-serif text-xl">{d.name}</p>
+            {role && (
+              <p className="mt-2 inline-block bg-sun px-2 py-0.5 text-xs font-semibold">
+                {faculty.roles[role]}
+              </p>
+            )}
+            <p className="mt-1 text-sm text-muted">
+              {d.expertise.map((t) => faculty.topics[t]).join(', ')}
+            </p>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
