@@ -22,18 +22,14 @@ export type ProgramsContent = {
 export const programsId: ProgramsContent = {
   programs: {
     label: 'Pendidikan',
-    hint: 'Pilih program untuk melihat daftar dosennya di bawah.',
-    linkLabel: 'Halaman program di FIB UI',
+    hint: 'Pilih jenjang, lalu lihat daftar pengajarnya di bawah.',
+    linkLabel: 'Lihat di laman fakultas',
     items: [
       {
         key: 's1',
         level: 'S1',
         name: 'Program Studi Ilmu Filsafat',
-        facts: [
-          '144 SKS (114 wajib, 30 pilihan)',
-          'Delapan semester',
-          'MBKM di semester 7, tugas akhir di semester 8',
-        ],
+        facts: ['144 SKS', 'Reguler dan Non-Reguler'],
         href: 'https://fib.ui.ac.id/program-studi-ilmu-filsafat/',
       },
       {
@@ -47,18 +43,18 @@ export const programsId: ProgramsContent = {
         key: 's3',
         level: 'S3',
         name: 'Program Doktor Ilmu Filsafat',
-        facts: ['88 SKS', 'Jalur kuliah atau jalur riset', 'Enam semester, berakhir di promosi'],
+        facts: ['88 SKS', 'Jalur kuliah atau jalur riset'],
         href: 'https://fib.ui.ac.id/program-doktor-ilmu-filsafat/',
       },
     ],
   },
   faculty: {
-    label: 'Dosen',
+    label: 'Tenaga Pengajar',
     selectLabel: 'Pilih jenjang',
-    listTitle: 'Dosen',
+    listTitle: 'Tenaga Pengajar',
     regularTitle: 'Dosen tetap',
     adjunctTitle: 'Dosen tidak tetap',
-    sourceNote: 'Daftar dosen dikonfirmasi departemen, Oktober 2026.',
+    sourceNote: 'Sumber: konfirmasi departemen, Oktober 2026.',
     roles: {
       ketuaDepartemen: 'Ketua Departemen',
       ketuaProdi: 'Ketua Program Studi',

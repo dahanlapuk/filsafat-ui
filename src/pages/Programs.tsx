@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ExternalIcon } from './icons'
 import { dosen, type Dosen, type Level } from '../content/dosen'
 import type { ProgramsContent } from '../content/programs'
 
@@ -17,10 +18,7 @@ export function Programs({ copy }: { copy: ProgramsContent }) {
       <section id="pendidikan" className="scroll-mt-4 bg-pale-soft py-16 md:py-24">
         <div className={wrap}>
           <h2 className={`${label} text-muted`}>{programs.label}</h2>
-          <p className="mt-4 max-w-2xl font-serif text-xl text-muted md:text-2xl">
-            {programs.hint}
-          </p>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
             {programs.items.map((p) => {
               const on = p.key === active
               return (
@@ -52,14 +50,16 @@ export function Programs({ copy }: { copy: ProgramsContent }) {
                   </ul>
                   <a
                     href={p.href}
-                    className={`mt-auto pt-6 text-sm font-semibold underline underline-offset-4 ${focus}`}
+                    className={`mt-auto inline-flex items-center gap-1.5 self-start pt-6 text-sm font-semibold underline underline-offset-4 ${focus}`}
                   >
                     {programs.linkLabel}
+                    <ExternalIcon />
                   </a>
                 </article>
               )
             })}
           </div>
+          <p className="mt-6 text-sm text-muted">{programs.hint}</p>
         </div>
       </section>
 

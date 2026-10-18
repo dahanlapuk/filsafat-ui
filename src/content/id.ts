@@ -6,7 +6,7 @@ export const contentId: Content = {
   header: { wordmark: 'Filsafat UI', switchLabel: 'Bahasa' },
   hero: {
     title: 'Departemen Filsafat Universitas Indonesia',
-    lead: 'Sarjana, magister, dan doktor ilmu filsafat di Fakultas Ilmu Pengetahuan Budaya, Kampus UI Depok.',
+    lead: 'Tempat belajar dan mengembangkan pemikiran filosofis, dari jenjang sarjana hingga doktoral, di Fakultas Ilmu Pengetahuan Budaya Universitas Indonesia.',
     programsLabel: 'Pendidikan',
     libraryLabel: 'Biblioteka Filsafat UI',
   },
@@ -15,17 +15,16 @@ export const contentId: Content = {
     facts: [
       { term: 'Jenjang', value: 'S1, S2, S3' },
       { term: 'Fakultas', value: 'Ilmu Pengetahuan Budaya' },
-      { term: 'Kampus', value: 'UI Depok' },
+      { term: 'Kampus', value: 'Universitas Indonesia, Kampus Depok' },
     ],
     paragraphs: [
-      'Departemen Filsafat berada di Fakultas Ilmu Pengetahuan Budaya Universitas Indonesia, Depok. Di bawahnya ada tiga program: Program Studi Ilmu Filsafat (S1), Program Magister Ilmu Filsafat (S2), dan Program Doktor Ilmu Filsafat (S3).',
-      'Rincian tiap program ada di bawah.',
+      'Lingkungan akademik dengan karakter filosofis yang kuat, diperkuat pengajar dengan kepakaran lintas bidang filsafat.',
     ],
   },
   nav: [
     { id: 'tentang', label: 'Tentang' },
     { id: 'pendidikan', label: 'Pendidikan' },
-    { id: 'dosen', label: 'Dosen' },
+    { id: 'dosen', label: 'Tenaga Pengajar' },
     { id: 'kurikulum', label: 'Kurikulum' },
     { id: 'biblioteka', label: 'Biblioteka' },
     { id: 'komunitas', label: 'Komunitas dan alumni' },
@@ -33,7 +32,7 @@ export const contentId: Content = {
   ],
   footer: {
     name: 'Departemen Filsafat Universitas Indonesia',
-    place: 'Fakultas Ilmu Pengetahuan Budaya, Kampus UI Depok',
+    place: 'Fakultas Ilmu Pengetahuan Budaya, Kampus Depok',
     menuLabel: 'Isi halaman',
     linksLabel: 'Tautan',
     libraryLabel: 'Biblioteka Departemen Filsafat UI',
