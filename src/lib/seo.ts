@@ -7,7 +7,7 @@ const copy = {
     path: '/',
     title: 'Departemen Filsafat Universitas Indonesia | S1, S2, S3',
     description:
-      'Departemen Filsafat Universitas Indonesia, Depok: program sarjana, magister, dan doktor ilmu filsafat, daftar dosen, perpustakaan departemen, dan kontak.',
+      'Program S1, S2, dan S3 ilmu filsafat di Fakultas Ilmu Pengetahuan Budaya Universitas Indonesia, Kampus Depok. Kurikulum, tenaga pengajar, dan Biblioteka.',
     locale: 'id_ID',
   },
   en: {
