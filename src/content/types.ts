@@ -17,6 +17,7 @@ export type Content = {
     libraryLabel: string
     infoLabel: string
     facultyLabel: string
+    tagline: string
     copyright: string
     builtBy: string
   }

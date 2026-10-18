@@ -122,6 +122,9 @@ export function Landing({ content: c }: { content: Content }) {
             </a>
             <p className="font-serif text-xl font-semibold">{c.footer.name}</p>
             <p className="mt-2 text-sm text-cream/80">{c.footer.place}</p>
+            <p lang="la" className="mt-6 font-serif text-lg text-sun">
+              {c.footer.tagline}
+            </p>
           </div>
           <nav aria-label={c.footer.menuLabel}>
             <p className={`${label} text-cream/80`}>{c.footer.menuLabel}</p>

@@ -38,6 +38,7 @@ export const contentEn: Content = {
     libraryLabel: 'Biblioteka Departemen Filsafat UI',
     infoLabel: 'Opening hours and location',
     facultyLabel: 'Faculty of Humanities, UI',
+    tagline: 'Viva Philosophia!',
     copyright: '© 2026 Department of Philosophy, Universitas Indonesia',
     builtBy: 'Built by',
   },

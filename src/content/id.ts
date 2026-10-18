@@ -38,6 +38,7 @@ export const contentId: Content = {
     libraryLabel: 'Biblioteka Departemen Filsafat UI',
     infoLabel: 'Jam buka dan lokasi',
     facultyLabel: 'Fakultas Ilmu Pengetahuan Budaya UI',
+    tagline: 'Viva Philosophia!',
     copyright: '© 2026 Departemen Filsafat Universitas Indonesia',
     builtBy: 'Dibuat oleh',
   },
